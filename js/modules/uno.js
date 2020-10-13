@@ -16,7 +16,7 @@ export default {
     `,
     cargar:function(){
         var result = document.getElementById('result');
-        var total = "";
+        
 
 
 
@@ -28,6 +28,7 @@ export default {
                 <th>sueldo</th>
             </tr>
         `;
+
         this.trabajadores.forEach(item => {
             tabla +=`
             <tr class="${item.sueldo > 350000 ? "sueldo_alto" : "sueldo_bajo"}">
@@ -36,6 +37,7 @@ export default {
                  <td>${item.sueldo}</td> 
             </tr>
             `
+            var columnas=e.querySelectorAll("td");
                
         });
         tabla +=`</table>`;
