@@ -29,12 +29,8 @@ export default {
             </tr>
         `;
         this.trabajadores.forEach(item => {
-            var color = "sueldo bajo";
-            if(item.sueldo <=350000){
-                color = "sueldo bajo";
-            }
             tabla +=`
-            <tr class"${color}>
+            <tr class="${item.sueldo > 350000 ? "sueldo_alto" : "sueldo_bajo"}">
                  <td>${item.numero}</td>
                  <td>${item.nombre}</td>
                  <td>${item.sueldo}</td> 
