@@ -16,6 +16,10 @@ export default {
     `,
     cargar:function(){
         var result = document.getElementById('result');
+        var total = "";
+
+
+
         var tabla =`
             <table border='1' width='400'>
             <tr>
@@ -25,12 +29,15 @@ export default {
             </tr>
         `;
         this.trabajadores.forEach(item => {
+            var color = "sueldo bajo";
+            if(item.sueldo <=350000){
+                color = "sueldo bajo";
+            }
             tabla +=`
-            <tr>
+            <tr class"${color}>
                  <td>${item.numero}</td>
                  <td>${item.nombre}</td>
-                 <td>${item.precio}</td>
-                 <td>${item.stock}</td>   
+                 <td>${item.sueldo}</td> 
             </tr>
             `
                
