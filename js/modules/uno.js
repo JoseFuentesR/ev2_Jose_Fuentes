@@ -37,8 +37,6 @@ export default {
                  <td>${item.sueldo}</td> 
             </tr>
             `
-            var columnas=e.querySelectorAll("td");
-               
         });
         tabla +=`</table>`;
 
